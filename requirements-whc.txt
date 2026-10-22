@@ -1,0 +1,4 @@
+# Install only in the WHC/Passenger Python virtual environment.
+# Render continues using requirements.txt unchanged.
+-r requirements.txt
+a2wsgi==1.10.10

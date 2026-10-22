@@ -1,0 +1,17 @@
+/* Phase 13: compact, tap-friendly event-day guest check-in. */
+.checkin-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.checkin-guest{padding:17px;min-width:0}
+.checkin-person{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.checkin-person strong{font-size:15px;overflow-wrap:anywhere}
+.checkin-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px;white-space:nowrap}
+.checkin-right strong{font-size:17px}
+.checkin-row-actions{display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap;margin-top:16px}
+.checkin-controls{display:flex;align-items:end;gap:8px;flex-wrap:wrap}
+.checkin-controls label{font-size:11px;font-weight:700;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.checkin-number{border:1px solid var(--line);border-radius:8px;background:white;height:37px;width:90px;padding:7px;font:inherit;font-size:14px}
+.checkin-scanner{margin-top:20px}
+.checkin-scan-tools{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.checkin-scan-tools .search{flex:1;min-width:210px}
+.checkin-video{display:none;width:min(360px,100%);max-height:250px;background:#121e29;border-radius:10px;object-fit:cover;margin:12px 0}
+@media(max-width:1120px){.checkin-list{grid-template-columns:1fr}}
+@media(max-width:600px){.checkin-guest{padding:14px}.checkin-person{gap:7px}.checkin-right .badge{white-space:normal}.checkin-scan-tools .search{min-width:100%}}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EventOS Check-in</title>
+<style>:root{font:16px system-ui,sans-serif;color:#193548;background:#f4f8fa}body{margin:0;padding:24px}.sheet{max-width:470px;margin:10vh auto;background:white;padding:28px;border-radius:20px;box-shadow:0 12px 40px #0012}h1{font-size:25px}button,a.action{display:inline-block;padding:12px 18px;border:0;border-radius:10px;background:#137c6a;color:#fff;text-decoration:none;font-weight:700;cursor:pointer}button:disabled{opacity:.5}.muted{color:#617888}.error{color:#ac3333}.success{color:#117153}</style></head>
+<body><main class="sheet"><h1>EventOS Guest Check-in</h1><p class="muted">Staff authorization is required. QR codes only identify an invitation and never check guests in automatically.</p><div id="result">Checking staff permissions…</div><p><a href="/" class="action">Open EventOS</a></p></main>
+<script>
+'use strict';
+(function(){
+var root=document.getElementById('result'),code=location.pathname.split('/').pop(),guest=null;
+function escapeHtml(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','&#39;':'&#39;'}[c]||'&#39;'})}
+async function request(method){var r=await fetch('/api/checkin/'+encodeURIComponent(code),{method:method,credentials:'same-origin'}),data=await r.json().catch(function(){return {}});if(!r.ok)throw Error(typeof data.detail==='string'?data.detail:'Request failed');return data}
+async function lookup(){
+ try{guest=await request('GET');root.innerHTML='<h2>'+escapeHtml(guest.guest_name)+'</h2><p>'+escapeHtml(guest.event_name)+'</p><p>Status: '+escapeHtml(guest.rsvp)+' · Attending: '+escapeHtml(guest.attending)+'</p>'+(guest.checked_in_at?'<p class="success">Already checked in.</p>':guest.rsvp==='Confirmed'?'<button id="confirm" type="button">Confirm check-in</button>':'<p class="error">Only confirmed RSVPs can check in.</p>');
+ var button=document.getElementById('confirm');if(button)button.onclick=async function(){if(!confirm('Check in '+guest.guest_name+' and '+guest.attending+' attendee(s)?'))return;button.disabled=true;try{await request('POST');root.innerHTML='<p class="success">Check-in recorded successfully.</p>'}catch(err){root.textContent=err.message}}
+ }catch(error){root.innerHTML='<p class="error">'+escapeHtml(error.message)+'</p><p class="muted">Sign into EventOS as an owner or editor before opening this QR code.</p>'}
+}
+lookup();
+})();
+</script></body></html>

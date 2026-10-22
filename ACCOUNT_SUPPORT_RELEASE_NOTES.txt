@@ -1,0 +1,13 @@
+EventOS — Consolidated WHC Super Admin, My Account & Support Center
+
+One ZIP for staging: includes the previously built super-admin dashboard plus:
+- My Account for all signed-in customers
+- Profile edits and secure password changes
+- Email changes with current password and verification link (SMTP required)
+- Cross-workspace plan/billing/usage summary and existing Stripe portal link
+- Customer Support Center and private tickets/messages
+- Admin-only support inbox, statuses and staff replies
+- Four new additive MariaDB tables and safe one-time cPanel schema helper
+
+No credentials, private database, or user data bundled.
+See ONE_TIME_WHC_DEPLOY.md. Do not deploy directly over the live site.

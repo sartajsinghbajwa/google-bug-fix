@@ -1,0 +1,30 @@
+.agency-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:18px 0}
+.agency-metrics>.card{padding:20px;display:grid;gap:8px}.agency-metrics small{color:#7f9086;font-size:11px;font-weight:700}.agency-metrics strong{color:#235c49;font-size:clamp(20px,3vw,29px);overflow-wrap:anywhere}
+.agency-portal{display:flex;justify-content:space-between;align-items:center;gap:22px;padding:27px;margin:18px 0;background:linear-gradient(125deg,#eff6f0,#fff);border:1px solid #e0ece4;border-radius:16px}
+.agency-portal>div:first-child{min-width:0;flex:1}.agency-portal h2{font-size:20px;margin:9px 0}.agency-portal p{color:#738c7c;font-size:12px;max-width:640px;line-height:1.75}.agency-portal small{font-size:11px;color:#6c907e}.agency-link{display:flex;gap:7px;align-items:center;max-width:640px;margin:10px 0}
+.agency-link input{flex:1;min-width:0;font-size:12px;padding:11px;border:1px solid #d2e5da;border-radius:8px}
+.agency-buttons{display:flex;gap:7px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.agency-doc-heading{display:flex;justify-content:space-between;gap:17px;align-items:center;margin:30px 0 17px}
+.agency-doc-heading h2{font-size:20px;margin:0 0 6px}.agency-doc-heading p{font-size:12px;color:#809386;margin:0}
+.agency-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:15px}
+.agency-filters button{background:white;border:1px solid #e3ebe5;padding:8px 15px;border-radius:8px;font-size:12px;cursor:pointer;color:#728579;font-weight:700}
+.agency-filters button.active{background:#246951;color:white;border-color:#246951}.agency-filters a{margin-left:auto}
+.agency-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.agency-doc{padding:20px;display:flex;flex-direction:column;gap:11px;min-width:0}
+.agency-doc h3{font-size:17px;color:#204637;margin:0}.agency-doc p{font-size:12px;color:#718578;line-height:1.75;margin:0}
+.agency-doc-top{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}
+.agency-doc-top small{color:#7a9080;font-size:10px;letter-spacing:.8px}
+.agency-status{font-size:10px;text-transform:capitalize;background:#eaf2e8;color:#4a8064;padding:5px 10px;border-radius:30px;font-weight:800}
+.agency-doc-amount{display:flex;flex-direction:column;gap:4px;margin-top:auto}.agency-doc-amount strong{font-size:20px;color:#265d46}
+.agency-doc-amount small{font-size:11px;color:#829689}.agency-doc .agency-buttons{justify-content:flex-start;margin-top:8px}
+.agency-empty{grid-column:1/-1;text-align:center;padding:55px 20px}.agency-empty h3{font-size:20px}.agency-empty p{color:#789}
+.agency-history h3{font-size:16px}.agency-history .attention-row small{font-size:11px;color:#74857d}
+.agency-modal{max-width:800px;max-height:92vh;overflow-y:auto}
+.agency-modal .field textarea{white-space:pre-wrap}.agency-line-heading{display:flex;justify-content:space-between;align-items:center;margin:24px 0 12px}.agency-line-heading h3{margin:0;font-size:14px}
+.agency-line{display:grid;grid-template-columns:2fr .65fr 1fr auto;gap:8px;align-items:end;margin:10px 0;border-bottom:1px solid #eff2ed;padding:0 0 11px}
+.agency-line label{display:grid;gap:5px;font-size:11px;color:#607b6c;font-weight:700}
+.agency-line input{border:1px solid #dbe6de;padding:9px;min-width:0;width:100%;border-radius:8px}
+.agency-detail>p{white-space:pre-wrap;font-size:13px;line-height:1.8;color:#5b7563}
+.agency-terms{white-space:pre-wrap;background:#f4f8f4;border-radius:10px;padding:16px;font-size:12px;line-height:1.8;max-height:240px;overflow:auto;margin:18px 0}
+@media(max-width:950px){.agency-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.agency-portal,.agency-doc-heading{flex-direction:column;align-items:stretch}.agency-buttons{justify-content:flex-start}}
+@media(max-width:650px){.agency-grid{grid-template-columns:1fr}.agency-line{grid-template-columns:1fr 1fr}.agency-line>label:first-child{grid-column:1/-1}.agency-line>button{align-self:end}.agency-filters a{margin-left:0}.agency-portal{padding:18px}.agency-doc-heading{margin-top:24px}}

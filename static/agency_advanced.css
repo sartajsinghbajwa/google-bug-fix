@@ -1,0 +1,33 @@
+/* Phase 12 agency operations dashboard, mobile-friendly */
+.agency-advanced{margin-top:25px;display:grid;gap:13px}
+.agency-advanced-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,#224f43,#408365);padding:22px 27px;border-radius:16px;color:white}
+.agency-advanced-heading>div{flex:1;min-width:200px}.agency-advanced-heading small{font-size:10px;letter-spacing:1.5px;color:#d0e7d9;font-weight:800}
+.agency-advanced-heading h2{margin:5px 0;font-size:23px;letter-spacing:-.5px;color:white}
+.agency-advanced-heading .small-note{color:#e4f3e8;max-width:650px;line-height:1.6;margin:6px 0}
+.agency-advanced-heading .btn{background:#f3fff5;color:#315e45;border:0}
+.agency-advanced-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.agency-advanced-metrics .card{padding:17px 20px}
+.agency-advanced-metrics small{font-size:10px;color:#7c9382;font-weight:750;display:block;margin-bottom:9px}
+.agency-advanced-metrics strong{font-size:21px;color:#296847}
+.agency-advanced-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.agency-advanced-columns>.card{min-width:0}
+.agency-advanced .card h3{margin:0 0 6px;font-size:17px;color:#315c4a}
+.agency-advanced-form{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding:13px;border:1px solid #dfe8df;background:#f6f9f5;border-radius:11px;margin:13px 0 15px}
+.agency-advanced-form label{display:grid;gap:5px;font-size:11px;font-weight:800;color:#67816e;flex:1 1 155px}
+.agency-advanced-form label.full{flex-basis:100%}
+.agency-advanced-form input:not([type=checkbox]),.agency-advanced-form select,.agency-advanced-form textarea{width:100%;min-width:0;min-height:38px;border:1px solid #c8d9cd;background:white;color:#345d48;border-radius:8px;padding:9px 10px;font:inherit}
+.agency-advanced-form .check{display:flex;align-items:center;gap:8px;flex:1 1 170px}
+.agency-advanced-form .check input{accent-color:#37845f;width:16px;height:16px}
+.agency-advanced-list{max-height:450px;overflow:auto;scrollbar-width:thin}
+.agency-advanced-line{display:flex;align-items:flex-start;justify-content:space-between;gap:13px;padding:12px 2px;border-top:1px solid #e5eee6}
+.agency-advanced-line>div:first-child{flex:1;min-width:0}
+.agency-advanced-line strong{font-size:13px;color:#2c6147;display:block;overflow-wrap:anywhere}
+.agency-advanced-line small{font-size:10px;color:#84998a;display:block;margin-top:4px}
+.agency-advanced-line p{font-size:11px;color:#617e68;line-height:1.5;white-space:pre-wrap;margin:5px 0}
+.agency-advanced-line b{font-size:12px;color:#347652;display:block;margin:7px 0}
+.agency-advanced-actions{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;max-width:260px}
+.agency-advanced-actions select{max-width:130px;min-height:34px;border:1px solid #cddfcf;border-radius:7px;padding:5px;background:white;color:#325b44;font-size:11px}
+.agency-advanced .btn.tiny{font-size:10px;padding:7px 9px}
+.agency-advanced-review{padding:15px;background:#fff1e8;border:1px solid #ecbf99;color:#8e552c;border-radius:11px;font-size:12px;font-weight:750}
+@media(max-width:950px){.agency-advanced-columns{grid-template-columns:1fr}.agency-advanced-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.agency-advanced-heading{padding:18px}.agency-advanced-heading h2{font-size:20px}.agency-advanced-heading .btn{width:100%;justify-content:center}.agency-advanced-metrics{gap:8px}.agency-advanced-metrics .card{padding:13px}.agency-advanced-metrics strong{font-size:16px}.agency-advanced-form label{flex:1 1 100%}.agency-advanced-line{flex-direction:column}.agency-advanced-actions{max-width:none;justify-content:flex-start;width:100%}}
